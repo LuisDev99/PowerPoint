@@ -1,0 +1,3 @@
+Poner el hcount y vcount con verilator public
+Agregar el reset y ponerlo en el always asynchrono
+Los pulsos en el archivo c++
