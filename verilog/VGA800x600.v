@@ -73,7 +73,7 @@ end
 always @ (posedge clk)
 begin
     if (address >= `IMG_NUMBER_OF_LINES) begin
-        address <= 16'd0;
+        address <= 15'd0;
     end
 
     if (hcount == 11'd1055)
@@ -91,7 +91,7 @@ begin
 
     if (hcount < 11'd800 && vcount < 10'd600) begin
         if(vcount >= 10'd10 && vcount <= `IMG_HEIGHT && hcount >= 11'd10 && hcount <= `IMG_WIDTH) begin
-            address <= address + 16'd1;                
+            address <= address + 15'd1;                
             rgb <= color;
         end else begin
             rgb <= 8'd4;
